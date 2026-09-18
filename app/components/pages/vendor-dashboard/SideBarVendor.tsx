@@ -70,10 +70,10 @@ export default function SideBarVendor() {
             }}
           >
             <Link href= '/provider/dashboard' className="font-thin text-[var(--neutral-white)]/70">
-              Crown-
+              Assure
             </Link>
             <Link href= '/provider/dashboard' className="font-extrabold text-[var(--neutral-white)]">
-              Haven
+              Homes
             </Link>
           </motion.div>
         </div>

@@ -61,10 +61,10 @@ export default function SideBarUser() {
             }}
           >
             <Link href={isLoggedIn ? '/dashboard' : '/'} className="font-thin text-[var(--neutral-white)]/70">
-              Crown-
+              Assure
             </Link>
             <Link href={isLoggedIn ? '/dashboard' : '/'} className="font-extrabold text-[var(--neutral-white)]">
-              Haven
+              Homes
             </Link>
           </motion.div>
         </div>

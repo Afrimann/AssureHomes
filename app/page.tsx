@@ -299,7 +299,7 @@ export default function LandingPage() {
         </h2>
         <p className="text-[var(--heading-color)] text-base md:text-lg max-w-xl opacity-80">
           Whether you are looking for a new home, selling your property, or
-          offering real estate services, Crown-Haven is your one-stop platform.
+          offering real estate services, Assure Homes is your one-stop platform.
         </p>
 
         <div className="flex flex-wrap justify-center items-center gap-4 mt-2">

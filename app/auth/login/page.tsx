@@ -93,10 +93,10 @@ export default function SignUp() {
           className="text-[var(--font-md)]"
         >
           <span className="font-thin text-[var(--neutral-white)]/70">
-            Crown-
+            Assure
           </span>
           <span className="font-extrabold text-[var(--neutral-white)]">
-            Haven
+            Homes
           </span>
         </motion.div>
 
@@ -112,7 +112,7 @@ export default function SignUp() {
             }}
             className="max-w-[90%] font-bold text-[32px] text-white md:text-[50px] leading-tight"
           >
-            Welcome Back to Crown-Haven{" "}
+            Welcome Back to Assure Homes{" "}
           </motion.h2>
           <motion.p
             initial={{ y: -50, opacity: 0 }}
@@ -140,7 +140,7 @@ export default function SignUp() {
           }}
         >
           <span className="text-[12px] text-[var(--neutral-white)]/70">
-            &copy; 2025 Crown-Haven. All rights reserved.
+            &copy; 2025 Assure Homes. All rights reserved.
           </span>
         </motion.div>
       </div>

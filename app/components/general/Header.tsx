@@ -49,10 +49,10 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="text-[var(--font-md)] cursor-pointer">
           <span className="font-normal text-[var(--neutral-black)]">
-            Crown-
+            Assure
           </span>
           <span className="font-extrabold text-[var(--neutral-black)]">
-            Haven
+            Homes
           </span>
         </Link>
 

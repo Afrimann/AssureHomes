@@ -6,7 +6,7 @@ import LayoutWrapper from './components/general/LayoutWrapper'
 const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CrownHaven',
+  title: 'Assure Homes',
   description: 'Real Estate Web Application'
 }
 

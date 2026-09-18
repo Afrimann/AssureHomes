@@ -166,7 +166,7 @@ export default function VendorFaq() {
                   Get in touch with us via email for urgent request/queries
                 </p>
                 <span className="text-[13px] text-[var(--primary-color)] underline">
-                  support@crown-haven.com
+                  support@assure-homes.com
                 </span>
               </div>
             </div>

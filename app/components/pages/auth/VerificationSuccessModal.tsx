@@ -42,7 +42,7 @@ export default function VerificationSuccessModal ({
               </span>
               <p className='text-[13px] text-[var(--foundation-neutral)] text-center'>
                 Your email has been successfully verified. Welcome to
-                Crown-Haven let’s get started!
+                Assure Homes let’s get started!
               </p>
             </div>
             <Button

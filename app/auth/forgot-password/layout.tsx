@@ -16,7 +16,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
 
       {/* Footer */}
       <footer className="py-4 text-white text-sm text-center">
-        © 2023 Crown Haven. All rights reserved.
+        © 2023 Assure Homes. All rights reserved.
       </footer>
     </div>
   );
