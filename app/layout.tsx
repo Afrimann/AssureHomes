@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Outfit } from 'next/font/google'
 import './globals.css'
 import LayoutWrapper from './components/general/LayoutWrapper'
@@ -8,6 +8,11 @@ const outfit = Outfit({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Assure Homes',
   description: 'Real Estate Web Application'
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1
 }
 
 export default function RootLayout({

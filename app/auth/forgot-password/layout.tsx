@@ -9,7 +9,7 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
     <div className="flex flex-col bg-[var(--primary-color)] h-screen">
       {/* Center content */}
       <div className="flex flex-1 justify-center items-center px-4">
-        <div className="bg-white shadow-md p-16 rounded-md w-full max-w-lg">
+        <div className="bg-white shadow-md p-6 md:p-16 rounded-md w-full max-w-lg">
           {children}
         </div>
       </div>
