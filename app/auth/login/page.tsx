@@ -80,7 +80,7 @@ export default function SignUp() {
   return (
     <div className="relative flex md:flex-row flex-col w-full min-h-screen">
       {/* Left side */}
-      <div className="top-0 sticky flex flex-col justify-between bg-[var(--primary-color)] px-8 py-16 w-full md:w-1/2 min-h-screen">
+      <div className="md:sticky md:top-0 flex flex-col justify-between bg-[var(--primary-color)] px-6 md:px-8 py-8 md:py-16 w-full md:w-1/2 min-h-[240px] md:min-h-screen">
         {/* logo */}
         <motion.div
           initial={{ y: -50, opacity: 0 }}
@@ -154,7 +154,7 @@ export default function SignUp() {
           delay: 0.9,
           ease: "easeIn",
         }}
-        className="relative flex flex-1 justify-center items-center bg-white px-8 py-16 w-full md:w-1/2 h-screen overflow-y-auto"
+        className="relative flex flex-1 justify-center items-center bg-white px-6 md:px-8 py-8 md:py-16 w-full md:w-1/2 md:h-screen md:overflow-y-auto"
       >
         {/* cta */}
         <div className="relative py-8 w-full">

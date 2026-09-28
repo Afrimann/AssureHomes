@@ -110,7 +110,7 @@ export default function LandingPage() {
   };
 
   return (
-    <main className="overflow-hidden w-full min-h-screen bg-white">
+    <main className="overflow-hidden w-full bg-white">
       {/* --- HERO SECTION --- */}
       <section className="relative flex flex-col w-full h-[85vh] md:h-screen overflow-hidden">
         {/* Background Image */}
@@ -168,14 +168,14 @@ export default function LandingPage() {
             <motion.div variants={fadeInUp} className="flex items-center gap-2 w-full max-w-[600px] px-2 md:px-0">
               <Input
                 placeholder="Search reliable real estate services"
-                className="h-12 flex-1 min-w-0 px-6 text-sm md:text-base font-normal bg-white rounded-md"
+                className="h-10 md:h-12 flex-1 min-w-0 px-6 text-sm md:text-base font-normal bg-white rounded-md"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
               />
               <span
                 onClick={handleSearch}
-                className="flex items-center justify-center h-12 bg-[var(--secondary-color)] text-white hover:opacity-90 cursor-pointer font-normal border-none rounded-md text-sm md:text-base px-6 transition-all shrink-0"
+                className="flex items-center justify-center h-10 md:h-12 bg-[var(--secondary-color)] text-white hover:opacity-90 cursor-pointer font-normal border-none rounded-md text-sm md:text-base px-6 transition-all shrink-0"
               >
                 Search
               </span>
