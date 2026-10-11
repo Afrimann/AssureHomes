@@ -72,6 +72,25 @@ export default function VendorMessages() {
     }
   }, [conversationsData]);
 
+  // Silently restore the last-open chat after a reload
+  useEffect(() => {
+    if (isLoadingConversations) return;
+    if (selectedChatId) return;
+    if (!conversationsData) return;
+
+    const lastChatId = sessionStorage.getItem("lastSelectedVendorChatId");
+    if (lastChatId) {
+      const exists = conversationsData.some(
+        (c) => String(c.conversation_id) === lastChatId
+      );
+      if (exists) {
+        handleSelectChat(lastChatId);
+      } else {
+        sessionStorage.removeItem("lastSelectedVendorChatId");
+      }
+    }
+  }, [conversationsData, isLoadingConversations, selectedChatId]);
+
   useEffect(() => {
     if (!isConversationsError) return;
     logger.error(" Failed to load conversations:", conversationsError);
@@ -195,6 +214,7 @@ export default function VendorMessages() {
 
     // console.log(" Selecting chat:", chatId);
     setSelectedChatId(chatId);
+    sessionStorage.setItem("lastSelectedVendorChatId", chatId);
 
     // Clear unread count when opening a chat
     setConversations((prev) =>
@@ -344,7 +364,10 @@ export default function VendorMessages() {
           <>
             {isMobile && (
               <button
-                onClick={() => setSelectedChatId(null)}
+                onClick={() => {
+                  setSelectedChatId(null);
+                  sessionStorage.removeItem("lastSelectedVendorChatId");
+                }}
                 className="flex items-center gap-1 px-4 py-2 bg-white border-b text-sm text-gray-700"
               >
                 <ChevronLeft size={18} />

@@ -107,37 +107,39 @@ export default function AdDetailsHomeScreen() {
           </div>
 
           {/* provider profile and rating */}
-          <div className="relative flex items-center gap-4 mt-4">
-            <div className="top-10 right-0 absolute">
-              {isMessagingCredible && (
+          <div className="relative mt-4">
+            <div className="flex items-center gap-4">
+              <div
+                className={`flex items-center gap-2 ${isMessagingCredible ? "" : "blur-sm"
+                  }`}
+              >
+                <Image
+                  alt="profile avatar"
+                  src="/user.png"
+                  width={30}
+                  height={30}
+                  className="rounded-full object-contain"
+                />
+                <h2 className="font-semibold text-[12px]">
+                  {adData?.data.business?.business_name ||
+                    "Business name not stated"}
+                </h2>
+              </div>
+              <div
+                className={`flex items-center gap-2 ${isMessagingCredible ? "" : "blur-sm"
+                  }`}
+              >
+                <Rating rate={5} />
+              </div>
+            </div>
+            {isMessagingCredible && (
+              <div className="mt-3 md:mt-0 md:absolute md:top-10 md:right-0 z-10">
                 <MiniChatBox
                   userId={detailId}
                   isMesagingCredible={isMessagingCredible}
                 />
-              )}
-            </div>
-            <div
-              className={`flex items-center gap-2 ${isMessagingCredible ? "" : "blur-sm"
-                }`}
-            >
-              <Image
-                alt="profile avatar"
-                src="/user.png"
-                width={30}
-                height={30}
-                className="rounded-full object-contain"
-              />
-              <h2 className="font-semibold text-[12px]">
-                {adData?.data.business?.business_name ||
-                  "Business name not stated"}
-              </h2>
-            </div>
-            <div
-              className={`flex items-center gap-2 ${isMessagingCredible ? "" : "blur-sm"
-                }`}
-            >
-              <Rating rate={5} />
-            </div>
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-4 mt-6 mb-8 w-full md:w-[60%]">

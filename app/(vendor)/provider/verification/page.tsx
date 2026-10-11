@@ -59,7 +59,7 @@ export default function VendorOnboarding () {
         {currentStep > 0 ? (
           <button
             onClick={handlePrevious}
-            className='bg-transparent hover:bg-[var(--primary-color)] px-6 py-2 border border-[var(--primary-color)] rounded font-semibold text-[14px] text-[var(--primary-color)] hover:text-white transition cursor-pointer'
+            className='bg-transparent hover:bg-[var(--primary-color)] px-6 py-2 border border-[var(--primary-color)] rounded font-semibold text-[14px] text-[var(--primary-color)] hover:text-white transition cursor-pointer whitespace-nowrap'
           >
             ← Previous Step
           </button>
@@ -71,7 +71,7 @@ export default function VendorOnboarding () {
         <button
           onClick={handleNext}
           disabled={!canProceed}
-          className={`px-6 py-2 rounded text-white cursor-pointer font-semibold text-[14px] flex items-center gap-2 transition
+          className={`px-6 py-2 rounded text-white cursor-pointer font-semibold text-[14px] flex items-center gap-2 transition whitespace-nowrap
           ${
             canProceed
               ? 'bg-blue-600 hover:bg-blue-700'

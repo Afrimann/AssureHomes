@@ -4,9 +4,7 @@ import UserTable from "./components/UserTable";
 export default function AdminUsers() {
   return (
     <div>
-      <div className="top-0 z-[100] sticky w-full">
-        <Header pageTitle="Users" />
-      </div>
+      <Header pageTitle="Users" />
       {/* content */}
       <section className="bg-[#F5F5F5] min-h-[90vh] w-full p-6">
         <div>

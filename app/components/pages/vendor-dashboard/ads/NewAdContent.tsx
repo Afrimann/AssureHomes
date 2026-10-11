@@ -293,14 +293,14 @@ export default function NewAdContent() {
         <button
           type="button"
           onClick={() => setPreviewOpen(true)}
-          className="bg-transparent rounded-sm cursor-pointer px-12 py-2 border border-[var(--primary-color)] w-full font-semibold text-[var(--primary-color)] hover:bg-[var(--primary-color)]/10 transition-colors"
+          className="bg-transparent rounded-sm cursor-pointer px-12 py-2 border border-[var(--primary-color)] w-full font-semibold text-[var(--primary-color)] hover:bg-[var(--primary-color)]/10 transition-colors whitespace-nowrap"
         >
           Preview Ad
         </button>
         <button
           type="submit"
           disabled={loading}
-          className="bg-[var(--primary-color)] rounded-sm hover:bg-[var(--primary-color)]/90 disabled:opacity-70 px-12 py-2 w-full font-semibold text-white cursor-pointer transition-colors"
+          className="bg-[var(--primary-color)] rounded-sm hover:bg-[var(--primary-color)]/90 disabled:opacity-70 px-12 py-2 w-full font-semibold text-white cursor-pointer transition-colors whitespace-nowrap"
         >
           {loading ? <LoadingDots /> : "Publish Ad"}
         </button>

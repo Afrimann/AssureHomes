@@ -4,7 +4,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function Loading() {
     return (
         <div>
-            <div className="top-0 z-[100] sticky w-full">
+            <div className="top-0 z-40 sticky w-full">
                 <div className="bg-white px-8 py-4 border-b">
                     <Skeleton className="w-48 h-8" />
                 </div>

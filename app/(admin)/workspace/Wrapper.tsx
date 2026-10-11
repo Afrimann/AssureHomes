@@ -21,7 +21,7 @@ export default function Wrapper({ children }: LayoutProps) {
 
   return (
     <SidebarProvider>
-      <div className="flex min-h-screen relative">
+      <div className="flex items-start min-h-screen relative">
         <SideBarAdmin />
         <section className="flex flex-col bg-white w-full md:w-[calc(100%-256px)] md:ml-[256px]">
           {children}

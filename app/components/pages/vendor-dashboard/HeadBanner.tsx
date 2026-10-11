@@ -11,11 +11,11 @@ export default function HeaderBanner() {
   const { toggleSidebar } = useSidebar()
 
   return (
-    <div className='bg-white shadow-lg px-6 py-4 w-full'>
+    <div className="top-0 z-40 sticky bg-white shadow-sm px-6 py-4 w-full">
       {/* welcome user */}
-      <div className='flex justify-between items-center w-full'>
-        <div className='flex items-center gap-2'>
-          <h1 className='font-bold text-[20px] text-[var(--heading-color)]'>
+      <div className='flex justify-between items-center gap-4 w-full'>
+        <div className='flex items-center gap-2 min-w-0'>
+          <h1 className='font-semibold text-[18px] md:text-[20px] text-[var(--heading-color)] truncate'>
             Hi, {user ? `${user.first_name} ${user.last_name}` : 'Guest'}
           </h1>
         </div>

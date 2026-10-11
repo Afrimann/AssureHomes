@@ -137,7 +137,8 @@ export const confirmCompletion = async (
 
 export const initiateCustomBooking = async (
   conversationId: string,
-  customPrice: number
+  customPrice: number,
+  referenceTerms: string
 ) => {
   try {
     const res = await apiClient.post(
@@ -145,6 +146,7 @@ export const initiateCustomBooking = async (
       {
         conversation_id: Number(conversationId),
         custom_price: customPrice,
+        reference_terms: referenceTerms,
       }
     );
     return res.data.data || res.data;

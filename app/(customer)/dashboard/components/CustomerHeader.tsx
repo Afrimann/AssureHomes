@@ -73,7 +73,7 @@ export default function CustomerHeader({
   return (
     <div>
       {/* --- Top Bar --- */}
-      <div className="relative flex justify-between items-center gap-4 md:gap-[50px] bg-white shadow-sm px-6 pt-4 pb-1">
+      <div className="top-0 z-40 sticky relative flex justify-between items-center gap-4 md:gap-[50px] bg-white shadow-sm px-6 py-4">
         <div className="flex gap-2 w-full">
           <Input
             type="text"

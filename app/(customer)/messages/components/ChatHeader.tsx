@@ -97,8 +97,8 @@ export default function ChatHeader({
 
   return (
     <div className="flex justify-between items-center bg-white p-4 border-b shadow-sm">
-      <div className="flex items-center gap-3">
-        <div className="relative">
+      <div className="flex items-center gap-3 min-w-0 flex-1">
+        <div className="relative shrink-0">
           <Image
             src={other_user.photo_url || "/user copy.png"}
             alt={other_user.full_name}
@@ -110,17 +110,17 @@ export default function ChatHeader({
           <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
         </div>
 
-        <div>
-          <h3 className="font-bold text-lg text-gray-900">
+        <div className="min-w-0">
+          <h3 className="font-bold text-base text-gray-900 truncate">
             {other_user.full_name}
           </h3>
         </div>
       </div>
 
-      <div>
+      <div className="shrink-0">
         <button
           onClick={handleBookNow}
-          className="bg-[var(--primary-color)] px-6 py-3 rounded-lg font-bold cursor-pointer text-white text-sm shadow-md transition-all hover:shadow-lg"
+          className="bg-[var(--primary-color)] px-6 py-3 rounded-lg font-bold cursor-pointer text-white text-sm shadow-md transition-all hover:shadow-lg whitespace-nowrap"
         >
           Book Now
         </button>

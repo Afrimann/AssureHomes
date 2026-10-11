@@ -50,9 +50,7 @@ export default function VendorDashboard() {
 
   return (
     <>
-      <div className="top-0 sticky w-full z-40">
-        <HeaderBanner />
-      </div>
+      <HeaderBanner />
       <div className="flex flex-col gap-2 px-6 py-4">
         <div className="flex flex-col md:flex-row gap-4 mt-2">
           <div className="mt-2 w-full md:w-[60%]">

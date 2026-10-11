@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 export default function Button ({ event, styles, title }: ButtonProps) {
   return (
-    <button className={`${styles}`} onClick={event}>
+    <button className={`whitespace-nowrap ${styles}`} onClick={event}>
       {title}
     </button>
   )

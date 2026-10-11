@@ -12,7 +12,7 @@ export default function UserDashboardLayout ({ children }: LayoutProps) {
   return (
     <SidebarProvider>
       <AuthLoader />
-      <div className='flex min-h-screen'>
+      <div className='flex items-start min-h-screen'>
         {/* sidebar (left) */}
         <div className='md:w-1/5'>
           <SideBarUser />

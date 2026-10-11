@@ -38,7 +38,7 @@ const GoToMailButton = ({ userEmail }: { userEmail: string | null }) => {
     <div className="flex justify-center mt-4">
       <button
         onClick={handleGoToMail}
-        className="flex items-center gap-2 bg-[var(--primary-color)] hover:opacity-90 px-6 py-2 rounded-md font-semibold text-white text-sm transition cursor-pointer"
+        className="flex items-center gap-2 bg-[var(--primary-color)] hover:opacity-90 px-6 py-2 rounded-md font-semibold text-white text-sm transition cursor-pointer whitespace-nowrap"
       >
         Go to Mail
         <ArrowRight color="white" size={15} />

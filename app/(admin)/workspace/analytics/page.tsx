@@ -85,9 +85,7 @@ export default function AdminAnalytics() {
 
   return (
     <div>
-      <div className="top-0 z-[100] sticky w-full">
-        <Header pageTitle="Analytics Overview" />
-      </div>
+      <Header pageTitle="Analytics Overview" />
 
       <section className="bg-[#F5F5F5] min-h-[90vh] w-full p-6">
         <div className="flex justify-between items-center">
