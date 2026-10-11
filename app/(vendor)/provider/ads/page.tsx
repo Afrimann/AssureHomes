@@ -89,9 +89,7 @@ export default function AllAds() {
   if (isLoading && ads.length === 0) {
     return (
       <>
-        <div className="top-0 z-40 sticky w-full">
-          <HeaderBanner query={searchQuery} setQuery={setSearchQuery} />
-        </div>
+        <HeaderBanner query={searchQuery} setQuery={setSearchQuery} />
         <div className="px-6 mb-4">
           <div className="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {[...Array(6)].map((_, i) => (
@@ -105,9 +103,7 @@ export default function AllAds() {
 
   return (
     <>
-      <div className="top-0 z-40 sticky w-full">
-        <HeaderBanner query={searchQuery} setQuery={setSearchQuery} />
-      </div>
+      <HeaderBanner query={searchQuery} setQuery={setSearchQuery} />
       {/* sort and filters */}
       <div className="px-6 py-6">
         <AdFilter sortBy={sortBy} onChangeSort={setSortBy} />

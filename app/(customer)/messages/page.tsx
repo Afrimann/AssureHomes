@@ -143,6 +143,7 @@ function MessagesContent() {
     if (selectedChatId === chatId) return;
     // console.log(" Selecting chat:", chatId);
     setSelectedChatId(chatId);
+    sessionStorage.setItem("lastSelectedChatId", chatId);
 
     // Clear unread count when opening a chat
     setConversations((prev) =>
@@ -158,27 +159,46 @@ function MessagesContent() {
   };
 
   useEffect(() => {
-    if (!urlConversationId) return;
     if (isLoadingConversations) return;
     if (selectedChatId) return;
-    // check if conversation exists
-    const exists = conversations.some(
-      (c) => String(c.conversation_id) === urlConversationId
-    );
+    if (!conversationsData) return; // query hasn't resolved yet
 
-    if (exists) {
-      logger.log(urlConversationId)
-      handleSelectChat(urlConversationId);
-    } else {
-      // Recovery path
-      notify(
-        "This conversation no longer exists or you don’t have access.",
-        "error",
-        "Conversation Not Found"
+    if (urlConversationId) {
+      // Deep link from an external flow (e.g. payment return)
+      const exists = conversationsData.some(
+        (c) => String(c.conversation_id) === urlConversationId
       );
-      router.replace("/messages");
+
+      if (exists) {
+        logger.log(urlConversationId)
+        handleSelectChat(urlConversationId);
+        // Consume the query param so it doesn't linger in history
+        router.replace("/messages");
+      } else {
+        // Recovery path
+        notify(
+          "This conversation no longer exists or you don’t have access.",
+          "error",
+          "Conversation Not Found"
+        );
+        router.replace("/messages");
+      }
+      return;
     }
-  }, [urlConversationId, conversations, isLoadingConversations, selectedChatId]);
+
+    // No deep link — silently restore the last-open chat after a reload
+    const lastChatId = sessionStorage.getItem("lastSelectedChatId");
+    if (lastChatId) {
+      const exists = conversationsData.some(
+        (c) => String(c.conversation_id) === lastChatId
+      );
+      if (exists) {
+        handleSelectChat(lastChatId);
+      } else {
+        sessionStorage.removeItem("lastSelectedChatId");
+      }
+    }
+  }, [urlConversationId, conversationsData, isLoadingConversations, selectedChatId]);
 
   // Update conversation snippet in sidebar
   const updateConversationSnippet = useCallback(
@@ -425,7 +445,10 @@ function MessagesContent() {
           <>
             {isMobile && (
               <button
-                onClick={() => setSelectedChatId(null)}
+                onClick={() => {
+                  setSelectedChatId(null);
+                  sessionStorage.removeItem("lastSelectedChatId");
+                }}
                 className="flex items-center gap-1 px-4 py-2 bg-white border-b text-sm text-gray-700"
               >
                 <ChevronLeft size={18} />

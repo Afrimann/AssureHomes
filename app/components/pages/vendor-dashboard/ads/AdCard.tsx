@@ -89,7 +89,7 @@ export default function ApartmentCard({
           <span className="font-bold text-[18px] text-[var(--heading-color)]">
             ₦{formatPrice(price)}
           </span>
-          <button className="bg-[var(--primary-color)] hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-[12px] text-white transition-all cursor-pointer">
+          <button className="bg-[var(--primary-color)] hover:bg-blue-700 px-4 py-2 rounded-md font-medium text-[12px] text-white transition-all cursor-pointer whitespace-nowrap shrink-0">
             Manage Ad
           </button>
         </div>

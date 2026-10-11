@@ -14,9 +14,9 @@ interface Props {
 export default function HeaderBanner({ query, setQuery }: Props) {
   const { toggleSidebar } = useSidebar();
   return (
-    <div className="bg-white shadow-sm px-6 py-4 w-full">
+    <div className="top-0 z-40 sticky bg-white shadow-sm px-6 py-4 w-full">
       {/* Top bar */}
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center gap-4">
         {/* Search Bar */}
         <div className="relative w-[80%]">
           <FaSearch
@@ -44,7 +44,7 @@ export default function HeaderBanner({ query, setQuery }: Props) {
           <div className="shadow-sm rounded-full">
             <ProfileDropDown />
           </div>
-          <div className="shadow-md rounded-full">
+          <div className="shadow-sm rounded-full">
             <NotificationDropdown />
           </div>
         </div>

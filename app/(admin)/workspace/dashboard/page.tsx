@@ -74,9 +74,7 @@ export default function AdminDashboard() {
     return <Loading />;
   return (
     <div>
-      <div className="top-0 z-[100] sticky w-full">
-        <Header pageTitle="Dashboard Overview" />
-      </div>
+      <Header pageTitle="Dashboard Overview" />
       {/* content */}
       <section className="bg-[#F5F5F5] min-h-[90vh] w-full p-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full items-center justify-center">

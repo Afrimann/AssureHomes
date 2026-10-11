@@ -181,7 +181,7 @@ export default function ChatFooter({
                         currentStep={currentStep}
                       />
                     </div>
-                    <div className="bg-[#FBF7EB] border border-[#D4AF37] rounded-sm px-4 py-1.5 w-full flex items-center justify-between">
+                    <div className="bg-[#FBF7EB] border border-[#D4AF37] rounded-sm px-4 py-1.5 w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                       <p className="text-[#D4AF37] text-[10px]">
                         You have a custom booking request of{" "}
                         {currentBooking.custom_price}
@@ -189,13 +189,13 @@ export default function ChatFooter({
                       <div className="flex gap-2 items-center">
                         <span
                           onClick={handleRejectBooking}
-                          className="bg-[#E63946] text-[10px] font-thin text-white shadow-sm px-4 py-1.5 rounded cursor-pointer"
+                          className="bg-[#E63946] text-[10px] font-thin text-white shadow-sm px-4 py-1.5 rounded cursor-pointer whitespace-nowrap"
                         >
                           {loadingAction === 'reject' ? <LoadingDots /> : "Reject Booking"}
                         </span>
                         <span
                           onClick={handleAcceptBooking}
-                          className="bg-[var(--success-color)] rounded cursor-pointer text-[10px] font-thin text-white border border-[var(--success-color )] shadow-sm px-4 py-1.5"
+                          className="bg-[var(--success-color)] rounded cursor-pointer text-[10px] font-thin text-white border border-[var(--success-color )] shadow-sm px-4 py-1.5 whitespace-nowrap"
                         >
                           {loadingAction === 'accept' ? <LoadingDots /> : "Accept Booking"}
                         </span>
@@ -220,7 +220,7 @@ export default function ChatFooter({
                       currentStep={currentStep}
                     />
                   </div>
-                  <div className="bg-[#FBF7EB] border border-[#D4AF37] rounded-sm px-4 py-1.5 w-full flex items-center justify-between">
+                  <div className="bg-[#FBF7EB] border border-[#D4AF37] rounded-sm px-4 py-1.5 w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                     <div className="flex items-center gap-2">
                       <p className="text-[#D4AF37] text-[10px]">
                         Awaiting vendor to accept booking.
@@ -234,7 +234,7 @@ export default function ChatFooter({
                     </div>
                     <span
                       onClick={handleRejectBooking}
-                      className="bg-[#E63946] text-[10px] font-thin text-white shadow-sm px-4 py-1.5 rounded cursor-pointer"
+                      className="bg-[#E63946] text-[10px] font-thin text-white shadow-sm px-4 py-1.5 rounded cursor-pointer whitespace-nowrap"
                     >
                       {loading ? <LoadingDots /> : "Cancel Booking"}
                     </span>
@@ -344,7 +344,7 @@ export default function ChatFooter({
                     currentStep={currentStep}
                   />
                 </div>
-                <div className="bg-[#FBF7EB] border border-[#D4AF37] rounded-sm px-4 py-1.5 w-full flex items-center justify-between">
+                <div className="bg-[#FBF7EB] border border-[#D4AF37] rounded-sm px-4 py-1.5 w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <p className="text-[#D4AF37] text-[10px]">
                     Click on 'Confirm Completion' when services to close this
                     booking
@@ -352,7 +352,7 @@ export default function ChatFooter({
                   <div className="flex gap-2">
                     <span
                       onClick={markAsClosed}
-                      className="bg-[var(--success-color)] text-[10px] font-semibold text-white shadow-sm px-4 py-1.5 rounded cursor-pointer"
+                      className="bg-[var(--success-color)] text-[10px] font-semibold text-white shadow-sm px-4 py-1.5 rounded cursor-pointer whitespace-nowrap"
                     >
                       {loading ? <LoadingDots /> : "Confirm Completion"}
                     </span>

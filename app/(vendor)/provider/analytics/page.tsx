@@ -71,9 +71,7 @@ export default function Analytics() {
 
   return (
     <div>
-      <div className="top-0 sticky w-full z-40">
-        <HeadBanner />
-      </div>
+      <HeadBanner />
       <div className="p-6">
         {/* metrics and charts */}
         <div className="gap-4 grid grid-cols-1 md:grid-cols-2 w-full">

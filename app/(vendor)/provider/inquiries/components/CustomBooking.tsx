@@ -23,6 +23,7 @@ export default function CustomBooking({
   conversationId,
 }: Props) {
   const [newPrice, setNewPrice] = useState("");
+  const [referenceTerms, setReferenceTerms] = useState("");
   const { notify } = useNotification();
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -33,7 +34,8 @@ export default function CustomBooking({
       logger.log(newPrice);
       const response = await initiateCustomBooking(
         conversationId,
-        Number(newPrice)
+        Number(newPrice),
+        referenceTerms
       );
       if (!response) {
         setLoading(false);
@@ -42,6 +44,7 @@ export default function CustomBooking({
       }
       notify(response.message, "success", "Booking Successful");
       setNewPrice('')
+      setReferenceTerms('')
       setTimeout(() => {
         onOpenChange(false);
       }, 600);
@@ -59,7 +62,7 @@ export default function CustomBooking({
   };
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogTrigger className="bg-[var(--primary-color)] px-6 py-3 rounded-lg font-bold cursor-pointer text-white text-sm shadow-md transition-all hover:shadow-lg">
+      <DialogTrigger className="bg-[var(--primary-color)] px-6 py-3 rounded-lg font-bold cursor-pointer text-white text-sm shadow-md transition-all hover:shadow-lg whitespace-nowrap">
         Custom Booking
       </DialogTrigger>
       <DialogContent className="w-[400px] [&>button]:hidden">
@@ -76,13 +79,22 @@ export default function CustomBooking({
               className="mt-2 border border-[#BFBFBF] placeholder:text-[#BFBFBF]"
               placeholder="NGN 40,000,000"
             />
+            <label className="font-semibold  text-black" htmlFor="referenceTerms">
+             Reference Terms <span className="text-red-600">*</span>
+            </label>
+            <textarea
+              value={referenceTerms}
+              onChange={(e) => setReferenceTerms(e.target.value)}
+              className="mt-2 border border-[#BFBFBF] placeholder:text-[#BFBFBF] placeholder:text-[14px] resize-none w-full h-24 p-2 rounded-md"
+              placeholder="What will you be doing for this client? What is the scope of work? What are the deliverables?"
+            />
             <div className="flex justify-between mt-4 items-center">
-              <DialogClose className="px-4 py-1.5 cursor-pointer bg-transparent text-[#334155] font-semibold">
+              <DialogClose className="px-4 py-1.5 cursor-pointer bg-transparent text-[#334155] font-semibold whitespace-nowrap">
                 Cancel
               </DialogClose>
               <button
                 onClick={initiateBooking}
-                className="px-4 py-1.5 border cursor-pointer rounded-sm border-[#BFBFBF] bg-[var(--primary-color)] text-white font-semibold"
+                className="px-4 py-1.5 border cursor-pointer rounded-sm border-[#BFBFBF] bg-[var(--primary-color)] text-white font-semibold whitespace-nowrap"
               >
                 {loading ? "Please Wait..." : "Send Offer"}
               </button>

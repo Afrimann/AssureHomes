@@ -136,10 +136,7 @@ export default function AddPaymentDetails() {
 
     return (
         <div className="flex flex-col min-h-screen bg-gray-50/50">
-            {/* Sticky Header to match Dashboard */}
-            <div className="top-0 sticky w-full z-40">
-                <HeaderBanner />
-            </div>
+            <HeaderBanner />
 
             <div className="flex flex-col p-6 mt-6 max-w-5xl mx-auto w-full">
                 {/* Page Header */}
