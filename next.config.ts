@@ -5,9 +5,9 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'assurehomes.org',
+        hostname: 'backend.assurehomes.org',
         port: '',
-        pathname: '/assurehomes/public/storage/**',
+        pathname: '/**',
       },
     ],
   },

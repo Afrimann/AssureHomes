@@ -3,7 +3,7 @@ import axios from "axios";
 import { getTokenFromCookies } from "@/lib/utils";
 
 const baseUrl =
-  process.env.NEXT_PUBLIC_BASE_URL || "https://yourdomain.com/newbackend";
+  process.env.NEXT_PUBLIC_BASE_URL || "https://backend.assurehomes.org";
 
 export const apiClient = axios.create({
   baseURL: baseUrl + "/api",
