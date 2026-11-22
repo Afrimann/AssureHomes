@@ -111,13 +111,13 @@ export default function AboutPage() {
                             whileHover={{ y: -5 }}
                             className="bg-white p-8 rounded-xl shadow-sm flex flex-col items-center text-center space-y-4"
                         >
-                            <div className="w-12 h-12 bg-[var(--primary-color)] bg-opacity-10 rounded-full flex items-center justify-center text-[var(--primary-color)]">
+                            <div className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white">
                                 <Mail size={24} />
                             </div>
                             <h3 className="font-bold text-xl text-[var(--heading-color)]">Email Us</h3>
                             <p className="text-gray-500">For general inquiries and support</p>
-                            <a href="mailto:info@assurehomes.com" className="font-semibold text-[var(--primary-color)] hover:underline">
-                                info@assurehomes.com
+                            <a href="mailto:admin@assurehomes.org" className="font-semibold text-[var(--primary-color)] hover:underline">
+                                admin@assurehomes.org
                             </a>
                         </motion.div>
 
@@ -126,13 +126,13 @@ export default function AboutPage() {
                             whileHover={{ y: -5 }}
                             className="bg-white p-8 rounded-xl shadow-sm flex flex-col items-center text-center space-y-4"
                         >
-                            <div className="w-12 h-12 bg-[var(--primary-color)] bg-opacity-10 rounded-full flex items-center justify-center text-[var(--primary-color)]">
+                            <div className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white">
                                 <Phone size={24} />
                             </div>
                             <h3 className="font-bold text-xl text-[var(--heading-color)]">Call Us</h3>
                             <p className="text-gray-500">Mon-Fri from 8am to 5pm</p>
-                            <a href="tel:+234800000000" className="font-semibold text-[var(--primary-color)] hover:underline">
-                                +234 800 000 000
+                            <a href="tel:+2349014869679" className="font-semibold text-[var(--primary-color)] hover:underline">
+                                +234 - 901 486 9679
                             </a>
                         </motion.div>
 
@@ -141,14 +141,16 @@ export default function AboutPage() {
                             whileHover={{ y: -5 }}
                             className="bg-white p-8 rounded-xl shadow-sm flex flex-col items-center text-center space-y-4"
                         >
-                            <div className="w-12 h-12 bg-[var(--primary-color)] bg-opacity-10 rounded-full flex items-center justify-center text-[var(--primary-color)]">
+                            <div className="w-12 h-12 bg-[var(--primary-color)] rounded-full flex items-center justify-center text-white">
                                 <MapPin size={24} />
                             </div>
                             <h3 className="font-bold text-xl text-[var(--heading-color)]">Visit Us</h3>
                             <p className="text-gray-500">Come say hello at our office</p>
-                            <p className="font-semibold text-[var(--heading-color)]">
-                                123 Estate Road, VI, Lagos
-                            </p>
+                            <address className="not-italic font-semibold text-[var(--heading-color)]">
+                                D Plazaville Shopping Complex,<br />
+                                119 Awolowo Way,<br />
+                                Ikeja, Lagos State, Nigeria.
+                            </address>
                         </motion.div>
                     </div>
 
