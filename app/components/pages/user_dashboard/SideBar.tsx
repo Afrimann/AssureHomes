@@ -64,7 +64,7 @@ export default function SideBarUser() {
       </AnimatePresence>
 
       <div
-        className={`fixed md:sticky top-0 flex flex-col bg-[var(--primary-color)] px-4 py-6 h-screen z-[1000] w-64 md:w-full
+        className={`fixed left-0 top-0 flex flex-col bg-[var(--primary-color)] px-4 py-6 h-dvh z-[1000] w-64 md:w-1/5
           ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
           md:translate-x-0 transition-transform duration-300 ease-in-out
         `}
