@@ -131,6 +131,12 @@ export default function Header() {
           >
             About
           </Link>
+          <Link
+            href="/about#contact"
+            className="text-[var(--neutral-black)] hover:text-[var(--secondary-color)] transition-colors"
+          >
+            Contact Us
+          </Link>
         </nav>
 
         {/* Desktop CTAs */}
@@ -270,6 +276,13 @@ function MobileMenu({
             }`}
         >
           About
+        </Link>
+        <Link
+          href="/about#contact"
+          onClick={onClose}
+          className="text-xl font-medium text-[var(--neutral-black)]"
+        >
+          Contact Us
         </Link>
       </nav>
 
